@@ -1,11 +1,14 @@
 %global debug_package %{nil}
 
+%global gh_user denilsonsa
+
 Name:           prettyping
 Version:        1.0.1
 Release:        1%{?dist}
 Summary:        prettyping is a wrapper around the standard ping tool, making the output prettier, more colorful, more compact, and easier to read.
 License:        MIT
-URL:            https://github.com/denilsonsa/%{name}
+URL:            https://github.com/%{gh_user}/%{name}
+Source:         https://github.com/%{gh_user}/%{name}/archive/v%{version}.tar.gz
 BuildArch:      noarch
 Requires:       bash >= 3.0
 
@@ -19,22 +22,19 @@ systems (Linux, Mac OS X, BSD…), as well as running on different versions of a
 (gawk, mawk, nawk, busybox awk).
 
 %prep
-wget https://github.com/denilsonsa/%{name}/archive/v%{version}.tar.gz
-tar xzf v%{version}.tar.gz
+%setup -q -n %{name}-%{version}
 
 %build
-cd %{name}-%{version}
 sed 's,/usr/bin/env bash,/bin/bash,g' -i prettyping
 
 %install
 mkdir -p %{buildroot}/usr/bin
-install -m755 %{name}-%{version}/%{name} %{buildroot}/usr/bin
+install -m755 %{name} %{buildroot}/usr/bin
 
 %files
 %{_bindir}/%{name}
-%doc %{name}-%{version}/README.md
+%doc README.md
 
 %changelog
 * Fri Aug 31 2018 Jamie Curnow <jc@jc21.com> - 1.0.1-1
-- Initial spec
-
+- https://github.com/denilsonsa/prettyping/releases/tag/v1.0.1
