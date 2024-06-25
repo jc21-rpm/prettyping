@@ -4,7 +4,7 @@
 
 Name:           prettyping
 Version:        1.0.1
-Release:        1
+Release:        1%{?dist}
 Summary:        prettyping is a wrapper around the standard ping tool, making the output prettier, more colorful, more compact, and easier to read.
 License:        MIT
 URL:            https://github.com/%{gh_user}/%{name}
