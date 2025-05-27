@@ -3,7 +3,7 @@
 %global gh_user denilsonsa
 
 Name:           prettyping
-Version:        1.0.1
+Version:        1.1.0
 Release:        1%{?dist}
 Summary:        prettyping is a wrapper around the standard ping tool, making the output prettier, more colorful, more compact, and easier to read.
 License:        MIT
@@ -38,3 +38,6 @@ install -m755 %{name} %{buildroot}/usr/bin
 %changelog
 * Fri Aug 31 2018 Jamie Curnow <jc@jc21.com> - 1.0.1-1
 - https://github.com/denilsonsa/prettyping/releases/tag/v1.0.1
+
+* Wed May 28 2025 Jamie Curnow <jc@jc21.com> - 1.1.0-1
+- https://github.com/denilsonsa/prettyping/releases/tag/v1.1.0
