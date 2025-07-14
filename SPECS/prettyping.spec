@@ -36,8 +36,8 @@ install -m755 %{name} %{buildroot}/usr/bin
 %doc README.md
 
 %changelog
-* Fri Aug 31 2018 Jamie Curnow <jc@jc21.com> - 1.0.1-1
-- https://github.com/denilsonsa/prettyping/releases/tag/v1.0.1
-
 * Wed May 28 2025 Jamie Curnow <jc@jc21.com> - 1.1.0-1
 - https://github.com/denilsonsa/prettyping/releases/tag/v1.1.0
+
+* Fri Aug 31 2018 Jamie Curnow <jc@jc21.com> - 1.0.1-1
+- https://github.com/denilsonsa/prettyping/releases/tag/v1.0.1
